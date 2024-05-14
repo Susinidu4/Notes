@@ -29,5 +29,7 @@ class AddNoteActivity : AppCompatActivity() {
             finish()
             Toast.makeText(this,"Note Saved", Toast.LENGTH_SHORT).show()
         }
+        
+        
     }
 }

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="@color/black"
     tools:context=".AddNoteActivity">
 
     <TextView
@@ -15,7 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:text="Add Note"
-        android:textColor="@color/Orange"
+        android:textColor="@color/white"
         android:textSize="24sp" />
 
     <ImageView
@@ -32,19 +33,21 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:hint="Enter the title"
+        android:textColorHint="@color/Gray"
         android:padding="12dp"
         android:textSize="20sp"
         android:layout_below="@+id/addNoteHeading"
         android:background="@drawable/orange_border"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="160dp"
         android:maxLines="1"
         android:fontFamily="@font/poppins"/>
 
     <EditText
         android:id="@+id/contentEditText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="100dp"
         android:hint="Enter the description"
+        android:textColorHint="@color/Gray"
         android:gravity="top"
         android:padding="12dp"
         android:textSize="18sp"

@@ -4,7 +4,7 @@
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/Orange</item>
         <item name="colorPrimaryVariant">@color/Orange</item>
-        <item name="android:statusBarColor">@color/Orange</item>
+        <item name="android:statusBarColor">@color/black</item>
     </style>
 
     <style name="Theme.Notes" parent="Base.Theme.Notes" />
