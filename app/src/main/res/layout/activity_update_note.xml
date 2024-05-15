@@ -28,6 +28,25 @@
         android:layout_alignTop="@+id/editNoteHeading"
         android:layout_marginEnd="6dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="430dp"
+        android:fontFamily="@font/poppins"
+        android:text="Select Priority"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/updatePrioritySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editNoteHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp" />
+
     <EditText
         android:id="@+id/UpdateTitleEditText"
         android:layout_width="match_parent"
@@ -57,5 +76,16 @@
         android:background="@drawable/orange_border"
         android:layout_below="@+id/UpdateTitleEditText"
         android:layout_marginTop="12dp"/>
+
+<!--    <DatePicker-->
+<!--        android:id="@+id/UpdateDateEditPicker"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="400dp"-->
+<!--        android:calendarViewShown="false"-->
+<!--        android:datePickerMode="spinner"-->
+<!--        android:datePickerStyle="@android:style/Widget.Material.Light.DatePicker" />-->
 
 </RelativeLayout>

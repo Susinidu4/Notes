@@ -58,4 +58,36 @@
         android:layout_below="@+id/titleEditText"
         android:layout_marginTop="12dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="430dp"
+        android:fontFamily="@font/poppins"
+        android:text="Select Priority"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/prioritySpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/addNoteHeading"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="-408dp"
+        android:layout_toEndOf="@id/addNoteHeading"/>
+
+<!--    <DatePicker-->
+<!--        android:id="@+id/dateEditPicker"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="400dp"-->
+<!--        android:calendarViewShown="false"-->
+<!--        android:datePickerMode="spinner"-->
+<!--        android:datePickerStyle="@android:style/Widget.Material.Light.DatePicker" />-->
+
+
 </RelativeLayout>

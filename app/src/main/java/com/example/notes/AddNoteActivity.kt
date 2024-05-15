@@ -1,18 +1,17 @@
 package com.example.notes
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.notes.databinding.ActivityAddNoteBinding
-import com.example.notes.databinding.ActivityMainBinding
+import java.util.Calendar
 
 class AddNoteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddNoteBinding
     private lateinit var db:NotesDatabaseHelper
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,13 +20,31 @@ class AddNoteActivity : AppCompatActivity() {
 
         db = NotesDatabaseHelper(this)
 
+        val priorityAdapter = ArrayAdapter.createFromResource(
+            this,
+            R.array.priority_levels,
+            android.R.layout.simple_spinner_item
+        )
+        priorityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.prioritySpinner.adapter = priorityAdapter
+
         binding.saveButton.setOnClickListener{
             val title = binding.titleEditText.text.toString()
             val content = binding.contentEditText.text.toString()
-            val note = Note(0, title, content)
-            db.insertNote(note)
-            finish()
-            Toast.makeText(this,"Note Saved", Toast.LENGTH_SHORT).show()
+            val priority = binding.prioritySpinner.selectedItemPosition
+
+//            val day = binding.dateEditPicker.dayOfMonth
+//            val month = binding.dateEditPicker.month
+//            val year = binding.dateEditPicker.year
+//            val calendar = Calendar.getInstance()
+//            calendar.set(year, month, day)
+//            val date = calendar.time
+
+                val note = Note(0, title, content, priority)//, date)
+                db.insertNote(note)
+                finish()
+                Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show()
+
         }
         
         
